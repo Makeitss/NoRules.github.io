@@ -93,11 +93,12 @@ body {
     padding-bottom:10vh;
 }
 #middle h1 {
+    font-size: 5vw;  /* Ajusta el tamaño de la fuente proporcionalmente al ancho de la pantalla */
     font-family: 'Barbra', sans-serif;
-    font-size: 8rem; /* Ajusta el tamaño de la fuente según tus necesidades */
     letter-spacing: 1rem; /* Espaciado general entre caracteres */
     text-align: center; /* Centra el texto */
     color: transparent;
+    margin-top: 12vh;
     -webkit-text-stroke: 1px #006039; /* Borde blanco con tamaño de 2px */
 }
 
@@ -483,6 +484,43 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    #middle h1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+    }
+    .center-image img {
+        max-width: 25vw;  /* Ajusta el logo en pantallas más pequeñas */
+    }
+    #near-footer h2 {
+        font-size: 6vw;  /* Hace el texto del footer proporcional */
+    }
+    #menu a {
+        font-size: 4vw;  /* Ajusta el tamaño de los enlaces del menú */
+    }
+    table {
+        font-size: 4vw;  /* Ajusta el tamaño de los iconos sociales */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (por ejemplo, móviles) */
+@media (max-width: 480px) {
+    #middle h1 {
+        font-size: 10vw; /* Aumenta aún más el tamaño de la fuente en pantallas móviles */
+    }
+    .center-image img {
+        max-width: 40vw; /* Ajusta aún más el logo en pantallas muy pequeñas */
+    }
+    #near-footer h2 {
+        font-size: 8vw; /* Hace el texto del footer proporcional */
+    }
+    #menu a {
+        font-size: 5vw;  /* Ajusta el tamaño de los enlaces del menú */
+    }
+    table {
+        font-size: 5vw;  /* Ajusta el tamaño de los iconos sociales */
+    }
+}
+
 @font-face {
     font-family: 'Barbra';
     src: url('assets/fonts/barbra/Barbra-Regular.ttf') format('truetype'); /* Ajusta la ruta si está en otro lugar */
@@ -499,10 +537,12 @@ body {
     top: 0;
     left: 0;
     width: 100%; /* Ajusta el ancho del video al 100% del viewport */
-    height: 100%; /* Ajusta la altura del video al 100% del viewport */
+    height: 100vh; /* Ajusta la altura del video al 100% del viewport */
     object-fit: cover; /* Asegura que el video cubra toda el área sin deformarse */
     z-index: -1; /* Envía el video al fondo para que no interfiera con otros elementos */
 }
+
+
 
 
 
