@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoRules.</title>
+    <link rel="icon" type="image/png" href="assets/img/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">About Us</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">SHOP</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <div id="title-container">
+            <h1 style="font-family: 'Barbra', sans-serif; letter-spacing: 0.5rem; text-align: center; display: flex; align-items: center; justify-content: center;">
+                N <i class="fas fa-ban" style="margin: 0 0rem; color: rgb(142, 3, 3); font-size: 4rem; vertical-align: middle;"></i> Rules
+            </h1>
+        </div>
+        <div id="center-logo" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 3vh; margin-bottom: 3vh;">
+            <div class="center-image">
+                <img src="assets/img/Log.png" alt="No Rules" style="max-width: 25vw; height: 100px;">
+            </div>
+        </div>
+        <div id="near-footer">
+            <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social2"><i class="fab fa-twitter"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a href="https://www.instagram.com/bynorules/" class="social3"><i class="fab fa-instagram"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;">
+                        <a class="social">
+                            <i class="fab fa-tiktok"></i> <!-- Icono de TikTok -->
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>                
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1 style="color: #006039">SHOP.</h1>
+        <section>
+            <div id="Tittle-Aboutus">
+            <h2 style="font-family: 'Barbra', sans-serif; letter-spacing: 0.5rem;">Hora de ser diferente</h2>
+                <p style="color: black">
+                ¡Es hora de romper las reglas! Elige esa prenda que grita tu esencia, la que te hace destacar entre la multitud. Encuentra el estilo que te define y empieza a mostrarle al mundo quién eres realmente.
+                </P>
+                <p style="color: black">
+                 Atrévete, sé único, sé NoRules.
+                </p>
+            </div>
+            <div>
+                <p style="color: #f1e7cf;">
+                .
+                </p>
+            </div>
+            <div id="used">
+                <div style="align-items: center; cursor: pointer;" onclick="window.location.href='sneakers.html';">
+                    <img src="assets/img/shoes.png" alt="Hoodies" style="width: 17px; height: auto; margin-right: 8px;">
+                    <span style="color:#006039">sneakers</span>
+                </div>  
+                <div style="align-items: center; cursor: pointer;" onclick="window.location.href='pantalones.html';">
+                    <img src="assets/img/pants.png" alt="Hoodies" style="width: 17px; height: auto; margin-right: 8px;">
+                    <span style="color:#006039">pantalones</span>
+                </div>  
+                <div style="align-items: center; cursor: pointer;" onclick="window.location.href='hoodies.html';">
+                    <img src="assets/img/iconhoodie.png" alt="Hoodies" style="width: 17px; height: auto; margin-right: 8px;">
+                    <span style="color:#006039">Hoodies</span>
+                </div>                
+                <div style="align-items: center; cursor: pointer;" onclick="window.location.href='camisetas.html';">
+                    <img src="assets/img/tshirt.png" alt="Hoodies" style="width: 17px; height: auto; margin-right: 8px;">
+                    <span style="color:#006039">camisetas</span>
+                </div>  
+            </div>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1 style="color:black">About Us</h1>
+            <section>
+                <div id="Tittle-Aboutus">
+                    <h2 style="font-family: 'Barbra', sans-serif; letter-spacing: 0.5rem;">
+                        No F*** Rules
+                    </h2>
+                </div>
+            </section>
+            <section>
+                <p style="color: black">
+                    En NoRules, creemos que las mejores cosas suceden cuando nos atrevemos a romper con lo establecido. Vivimos para romper esquemas. No seguimos tendencias; las creamos. Nuestra ropa no solo es extravagante, es una declaración de estilo, una invitación a mostrarle al mundo quién eres realmente. Diseñamos cada prenda pensando en aquellos que quieren destacar, en quienes ven la moda como una extensión de su personalidad. Nuestros materiales de alta calidad y diseños únicos no solo hablan de estilo, sino también de autenticidad.
+                </p>
+                <p style="color: black">
+                    Para nosotros, la moda no tiene límites, y las reglas están hechas para romperse. Vestir NoRules es atreverte a ser tú mismo, con toda la intensidad, creatividad y originalidad que llevas dentro.
+                </p>
+                <p style="color: black">   
+                    No buscamos encajar, buscamos sobresalir. Y contigo, lo logramos.      
+                </p>              
+            </section>
+            <section>
+                <div id="About_us">
+                <h2>Se Autentico.</h2>
+                </div>
+            </section>
+        </div>
+          <div id="contact_container" class="container">
+            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+            <h1>Contact.</h1>
+            <section>
+                <h2>Contact Us</h2>
+                <div id="placeholder-container">
+                <p>
+                    <form>
+                        <input style="color: #006039; border: none; border-bottom: 2px solid #006039; background: transparent; outline: none;" type="text" placeholder="Name" required>
+                            <textarea class="auto-resize" 
+                            style="color: #006039; border: none; border-bottom: 2px solid #006039; background: transparent; outline: none; resize: none;" 
+                            placeholder="Your message" required rows="2"></textarea>                  
+                        <button class="btn_one">Send</button>
+                    </form> 
+                </p>
+                </div>
+                <div id="W-contact">
+                <h2 style="font-family: 'Barbra', sans-serif; align-items: center;">
+                Whatsapp
+                <i class="fab fa-whatsapp" style="color:#006039"></i> - 3143372157
+                </h2>
+                <h2 style="font-family: 'Barbra', sans-serif; align-items: center;">
+                Phone Number
+                <i class="fas fa-phone" style="color:#006039"></i> - 3143372157
+                </h2>
+                </div>
+            </section>            
+        </div>
+        <div id="footer">
+            made by <br> <a href="">NoRules</a>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particle.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+<video autoplay muted loop id="background-video" poster="assets/img/fall-back.png">
+    <source src="assets/video/retro-glass-material.webm" type="video/webm">
+    <source src="assets/video/retro-glass-material.mp4" type="video/mp4">
+    <source src="assets/video/retro-glass-material.ogv" type="video/ogg">
+    Tu navegador no soporta la reproducción de video.
+</video>
+</html>
