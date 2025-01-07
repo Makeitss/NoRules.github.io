@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.57/build/spline-viewer.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="loading">
         <div id="spinner"></div>
     </div>
+    <spline-viewer url="https://prod.spline.design/MgrRRjPzYBIExDQG/scene.splinecode"></spline-viewer>
     <div id="particles-js"></div>
     <div id="box">
         <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
@@ -28,7 +30,7 @@
     </div>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">About Us</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">SHOP</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">Contact</a>
     <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
         <div id="title-container">
             <h1 style="font-family: 'Barbra', sans-serif; letter-spacing: 0.5rem; text-align: center; display: flex; align-items: center; justify-content: center;">
@@ -156,8 +158,4 @@
     <script src="app.js"></script>
     <script src="script.js"></script>
 </body>
-<video autoplay muted loop id="background-video" poster="assets/img/fall-back.png">
-    <source src="assets/video/retro-glass-material.webm" type="video/webm"
-    Tu navegador no soporta la reproducción de video.
-</video>
 </html>
