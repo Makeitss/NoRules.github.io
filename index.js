@@ -51,3 +51,13 @@ setTimeout(function(){
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+function toggleMenu() {
+    const menu = document.getElementById('dropdown-menu');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none'; // Ocultar el menú si ya está abierto
+    } else {
+        menu.style.display = 'flex'; // Mostrar el menú si está cerrado
+    }
+}
+

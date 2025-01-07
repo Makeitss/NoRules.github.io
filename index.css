@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.unsplash.com/photo-1491956175078-460aea0914ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1550&q=80") center center;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-size:cover;
     width:100vw;
     height:100vh;
@@ -35,20 +35,82 @@ body {
     100% {transform: rotate(360deg);}
 }
 
-/* Asegura que el spline-viewer ocupe la mitad de la pantalla y esté centrado */
+/* Asegura que el spline-viewer cubra el 100% de la ventana */
 spline-viewer {
-    position: fixed;  /* Fijar la posición */
+    position: fixed;        /* Fijar el objeto al fondo */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;  /* Colocar el fondo detrás del contenido */
+    width: 100%;            /* Ocupar el 100% del ancho */
+    height: 100%;           /* Ocupar el 100% de la altura */
+    z-index: -1;            /* Coloca el objeto 3D detrás del contenido */
+    object-fit: contain;    /* Ajuste de contenedor, para que el objeto no se deforme */
 }
 
+/* Estilo para el contenido que va encima del spline-viewer */
 #content {
     position: relative;
-    z-index: 1;
+    z-index: 1;          /* Coloca el contenido por encima del fondo */
     padding: 20px;
+}
+
+/* Ícono de menú estilo hamburguesa */
+#hamburger-menu {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100; /* Asegúrate de que esté por encima del contenido */
+}
+
+#hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menú desplegable */
+#dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: #006039;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 99;
+}
+
+#dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+#dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar el ícono de menú en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #hamburger-menu {
+        display: flex;
+    }
+
+    #about, #work, #contact {
+        display: none; /* Ocultar las secciones grandes */
+    }
 }
 
 
@@ -191,60 +253,83 @@ spline-viewer {
     text-align: center; /* Centra el texto dentro del contenedor */
 }
 
-#about {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    transform:rotate(-90deg);
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    left:0;
-    bottom:40vh;
-    display:flex;
+/* Estilos principales */
+#about, #work, #contact {
+    width: 10vw; /* Cambiar a porcentaje o mantener vw si es fijo */
+    height: 10vw; /* Cambiar a porcentaje o mantener vw si es fijo */
+    text-align: center;
+    font-size: 1.2vw; /* Cambia font-size a una unidad flexible */
+    background: transparent;
+    color: #fff;
+    position: fixed;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+    justify-content: center;
+    z-index: 4;
+    transition: 0.4s ease-in-out;
+}
+
+/* Ajustes individuales */
+#about {
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: 40vh;
+    border-radius: 0 0 100px 100px;
 }
 
 #work {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    transform:rotate(90deg);
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    right:0;
-    bottom:40vh;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:0px 0px 100px 100px;
+    transform: rotate(90deg);
+    right: 0;
+    bottom: 40vh;
+    border-radius: 0 0 100px 100px;
 }
 
 #contact {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    bottom:0;
-    left:45vw;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:100px 100px 0px 0px;
+    bottom: 0;
+    left: 45vw;
+    border-radius: 100px 100px 0 0;
+}
+
+/* Media query para pantallas pequeñas (celulares, menos de 768px) */
+@media screen and (max-width: 768px) {
+    #about, #work, #contact {
+        width: 15vw; /* Aumenta un poco para mejor visualización en móviles */
+        height: 15vw;
+        font-size: 3vw; /* Ajusta tamaño del texto */
+    }
+
+    #about {
+        bottom: 30vh; /* Baja un poco para pantallas pequeñas */
+    }
+
+    #work {
+        bottom: 30vh;
+    }
+
+    #contact {
+        left: 40vw; /* Ajusta posición del contacto */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    #about, #work, #contact {
+        width: 20vw;
+        height: 20vw;
+        font-size: 4vw;
+    }
+
+    #about {
+        bottom: 20vh;
+    }
+
+    #work {
+        bottom: 20vh;
+    }
+
+    #contact {
+        left: 35vw;
+    }
 }
 
 #about:hover {
