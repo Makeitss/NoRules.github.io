@@ -425,7 +425,7 @@ spline-viewer {
     background-color: black; /* El cubo es negro */
     z-index: 1000;
     opacity: 0; /* Empieza invisible */
-    animation: showAfterDelay 0s 2s forwards; /* Se hace visible después de 3 segundos */
+    animation: showAfterDelay 0s 1.8s forwards; /* Se hace visible después de 3 segundos */
 }
 
 @keyframes showAfterDelay {
